@@ -171,7 +171,7 @@ function finity.new(isdark, gprojectName, thinProject)
 		finityData.ToggleKey = NewKey
 		
 		if not projectName then
-			self2.tip.Text = "Press '".. string.sub(tostring(NewKey), 14) .."' to hide this menu"
+			self2.tip.Text = "Cynical LT2 Script - Discord: https://discord.gg/T5ssB7G"
 		end
 		
 		if finityData.UpConnection then
@@ -231,7 +231,7 @@ function finity.new(isdark, gprojectName, thinProject)
 		BackgroundColor3 = theme.main_container,
 		BorderSizePixel = 0,
 		Position = UDim2.new(0.5, 0, 0.5, 0),
-		Size = UDim2.new(0, 500, 0, 500),
+		Size = UDim2.new(0, 400, 0, 300),
 		ZIndex = 2,
 		ImageTransparency = 1
     })
