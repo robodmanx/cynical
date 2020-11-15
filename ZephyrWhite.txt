@@ -244,7 +244,7 @@ function Library:CreateMain(Options)
 			Font = Enum.Font.GothamBold,
 			Text = Name,
 			Name = Name,
-			TextColor3 = Color3.fromRGB(255,255,255),
+			TextColor3 = Color3.fromRGB(79, 195, 247),
 			TextSize = 18,
 			TextWrapped = true,
 			TextXAlignment = Enum.TextXAlignment.Left,
@@ -326,7 +326,7 @@ function Library:CreateMain(Options)
 				Size = UDim2.new(0.38499999, 0, 0, 25),
 				Font = Enum.Font.GothamBold,
 				Text = Name,
-				TextColor3 = Color3.fromRGB(255,255,255),
+				TextColor3 = Color3.fromRGB(79, 195, 247),
 				TextSize = 18.000,
 				TextXAlignment = Enum.TextXAlignment.Left,
 				TextYAlignment = Enum.TextYAlignment.Bottom,
@@ -378,7 +378,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0.8, 0, 0, 30),
 						Font = Enum.Font.GothamBold,
 						Text = Name,
-						TextColor3 = Color3.fromRGB(255,255,255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 					})
 		
@@ -445,7 +445,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0, 200, 0, 30),
 						Font = Enum.Font.GothamBold,
 						Text = Name,
-						TextColor3 = Color3.fromRGB(255,255,255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
@@ -458,7 +458,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0.088, 0, 0, 22),
 						Font = Enum.Font.GothamBold,
 						Text = Min,
-						TextColor3 = Color3.fromRGB(255,255,255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Right,
 					})
@@ -602,7 +602,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0.399576753, 0, 0.857142866, 0),
 						Font = Enum.Font.GothamBold,
 						Text = Name,
-						TextColor3 = Color3.fromRGB(255,255,255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
@@ -721,7 +721,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0.400000006, 0, 0, 30),
 						Font = Enum.Font.GothamBold,
 						Text = Name,
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
@@ -748,7 +748,7 @@ function Library:CreateMain(Options)
 						Font = Enum.Font.GothamBold,
 						PlaceholderText = PlaceHolderText or "Text",
 						Text = "",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 14.000,
 						TextWrapped = true,
 						TextXAlignment = Enum.TextXAlignment.Right,
@@ -795,7 +795,7 @@ function Library:CreateMain(Options)
 						Position = UDim2.new(0.008, 0, 0, 2),
 						Size = UDim2.new(.991, 0, 0, 30),
 						Font = Enum.Font.GothamBold,
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
@@ -843,7 +843,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0.400000006, 0, 0, 30),
 						Font = Enum.Font.GothamBold,
 						Text = Name,
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
@@ -870,7 +870,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0, 30, 1, 0),
 						Font = Enum.Font.GothamBold,
 						Text = "None",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 					})
 					
@@ -1071,7 +1071,7 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(0.200000003, 200, 1, 0),
 							Font = Enum.Font.GothamBold,
 							Text = tostring(selectedvalue),
-							TextColor3 = Color3.fromRGB(255, 255, 255),
+							TextColor3 = Color3.fromRGB(79, 195, 247),
 							TextSize = 18.000,
 							TextXAlignment = Enum.TextXAlignment.Left,
 						})
@@ -1166,7 +1166,7 @@ function Library:CreateMain(Options)
 									ZIndex = 2,
 									Font = Enum.Font.GothamBold,
 									Text = v,
-									TextColor3 = Color3.fromRGB(255, 255, 255),
+									TextColor3 = Color3.fromRGB(79, 195, 247),
 									TextSize = textsize,
 								})
 								
@@ -1432,7 +1432,7 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(0.65, 0, 1, 0),
 							Font = Enum.Font.GothamBold,
 							Text = tostring(selectedvalue),
-							TextColor3 = Color3.fromRGB(255, 255, 255),
+							TextColor3 = Color3.fromRGB(79, 195, 247),
 							TextSize = 18.000,
 							TextXAlignment = Enum.TextXAlignment.Left,
 						})
@@ -1527,7 +1527,7 @@ function Library:CreateMain(Options)
 									ZIndex = 2,
 									Font = Enum.Font.GothamBold,
 									Text = v,
-									TextColor3 = Color3.fromRGB(255, 255, 255),
+									TextColor3 = Color3.fromRGB(79, 195, 247),
 									TextSize = textsize,
 								})
 								
@@ -1793,7 +1793,7 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0.4, 0, 0, 30),
 						Font = Enum.Font.GothamBold,
 						Text = Name,
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 18.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
@@ -1866,7 +1866,7 @@ function Library:CreateMain(Options)
 						ZIndex = 2,
 						Font = Enum.Font.GothamBold,
 						Text = "255",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 11.000,
 					})
 					
@@ -1879,7 +1879,7 @@ function Library:CreateMain(Options)
 						ZIndex = 2,
 						Font = Enum.Font.GothamBold,
 						Text = "R:",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 14.000,
 					})
 					
@@ -1909,7 +1909,7 @@ function Library:CreateMain(Options)
 						Name = "Colorpicker",
 						Font = Enum.Font.GothamBold,
 						Text = "255",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 11.000,
 					})
 					
@@ -1922,7 +1922,7 @@ function Library:CreateMain(Options)
 						Font = Enum.Font.GothamBold,
 						Text = "G:",
 						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 14.000,
 						TextWrapped = true,
 					})
@@ -1951,7 +1951,7 @@ function Library:CreateMain(Options)
 						Font = Enum.Font.GothamBold,
 						Text = "255",
 						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 11.000,
 					})
 					
@@ -1964,7 +1964,7 @@ function Library:CreateMain(Options)
 						Font = Enum.Font.GothamBold,
 						Text = "B:",
 						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 14.000,
 					})
 					
@@ -2062,7 +2062,7 @@ function Library:CreateMain(Options)
 						Font = Enum.Font.GothamBold,
 						Text = "Rainbow",
 						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextColor3 = Color3.fromRGB(79, 195, 247),
 						TextSize = 14.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
