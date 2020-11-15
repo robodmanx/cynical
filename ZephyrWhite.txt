@@ -128,7 +128,7 @@ function Library:CreateMain(Options)
 	
 	Main.Categorieshandler = Library:Create("Frame", {
 		Name = "Categories",
-		BackgroundColor3 = Color3.fromRGB(46, 46, 54),
+		BackgroundColor3 = Color3.fromRGB(245, 245, 245),
 		BorderSizePixel = 0,
 		Position = UDim2.new(0.214041084, 0, 0.00869414024, 0),
 		Size = UDim2.new(0.784817278, 0, 0.991132021, 0),
