@@ -110,7 +110,7 @@ function Library:CreateMain(Options)
 	Main.Sidebar = Library:Create("ScrollingFrame", {
 		Name = "Sidebar",
 		Active = true,
-		BackgroundColor3 = Color3.fromRGB(245, 245, 245),
+		BackgroundColor3 = Color3.fromRGB(170, 173, 228),
 		BorderSizePixel = 0,
 		Position = UDim2.new(0, 0, 0.00899999309, 0),
 		Size = UDim2.new(0.214041099, 0, 0.991376221, 0),
@@ -128,7 +128,7 @@ function Library:CreateMain(Options)
 	
 	Main.Categorieshandler = Library:Create("Frame", {
 		Name = "Categories",
-		BackgroundColor3 = Color3.fromRGB(245, 245, 245),
+		BackgroundColor3 = Color3.fromRGB(170, 173, 228),
 		BorderSizePixel = 0,
 		Position = UDim2.new(0.214041084, 0, 0.00869414024, 0),
 		Size = UDim2.new(0.784817278, 0, 0.991132021, 0),
