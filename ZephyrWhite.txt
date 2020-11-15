@@ -20,7 +20,7 @@ local Themes = {
 }
 
 local bannerColor = Color3.fromRGB(230, 230, 241)
-local selectedTab = Color3.fromRGB(165, 162, 195)
+local selectedTab = Color3.fromRGB(181, 179, 207)
 
 function Library:Create(what, propri)
 	local instance = Instance.new(what)
