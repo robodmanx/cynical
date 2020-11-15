@@ -20,6 +20,7 @@ local Themes = {
 }
 
 local bannerColor = Color3.fromRGB(230, 230, 241)
+local selectedTab = Color3.fromRGB(202, 200, 238)
 
 function Library:Create(what, propri)
 	local instance = Instance.new(what)
@@ -142,7 +143,7 @@ function Library:CreateMain(Options)
 		Position = UDim2.new(0, 0, 0, 0),
 		Size = UDim2.new(0.95, 0, 0, 30),
 		Image = "rbxassetid://3570695787",
-		ImageColor3 = Color3.fromRGB(225, 225, 225),
+		ImageColor3 = selectedTab,
 		ScaleType = Enum.ScaleType.Slice,
 		SliceCenter = Rect.new(100, 100, 100, 100),
 		SliceScale = 0.04,
