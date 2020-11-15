@@ -19,7 +19,7 @@ local Themes = {
 	TextColor = Color3.fromRGB(79, 195, 247)
 }
 
-local bannerColor = Color3.fromRGB(130, 123, 199)
+local bannerColor = Color3.fromRGB(230, 230, 241)
 
 function Library:Create(what, propri)
 	local instance = Instance.new(what)
