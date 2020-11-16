@@ -1983,7 +1983,7 @@ function Library:CreateMain(Options)
 						Image = "rbxassetid://4695575676",
 						ImageColor3 = bannerColor,
 						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(128, 128, 128, 128),[1]
+						SliceCenter = Rect.new(128, 128, 128, 128),
 						SliceScale = 0.040,
 					})
 					
