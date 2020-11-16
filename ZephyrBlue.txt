@@ -166,7 +166,7 @@ function Library:CreateMain(Options)
 			AutoButtonColor = false,
 			Font = Enum.Font.SourceSans,
 			Text = "",
-			TextColor3 = Color3.fromRGB(0, 0, 0),
+			TextColor3 = textColor,
 			TextSize = 14.000,
 		})
 		
