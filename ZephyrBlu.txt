@@ -707,7 +707,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.TextBox = Library:Create("ImageLabel", {
 						Name = Name.."Textbox",
-						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
+						BackgroundColor3 = textColor,
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
 						Position = UDim2.new(0.0192307699, 0, 0.467741936, 0),
@@ -782,7 +782,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.TextLabelBox = Library:Create("ImageLabel", {
 						Name = Name.."TextLabel",
-						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
+						BackgroundColor3 = textColor,
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
 						Position = UDim2.new(0.0192307699, 0, 0.467741936, 0),
@@ -1091,7 +1091,7 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(1, 0, 0, 120),
 							ZIndex = 2,
 							Image = "rbxassetid://3570695787",
-							ImageColor3 = textColor,
+							ImageColor3 = bannerColor,
 							ScaleType = Enum.ScaleType.Slice,
 							SliceCenter = Rect.new(100, 100, 100, 100),
 							SliceScale = 0.040,
@@ -1429,7 +1429,7 @@ function Library:CreateMain(Options)
 						
 						Interactables.selected = Library:Create("TextBox", {
 							Active = false,
-							BackgroundColor3 = Color3.fromRGB(248, 248, 248),
+							BackgroundColor3 = textColor,
 							BackgroundTransparency = 1.000,
 							BorderSizePixel = 0,
 							Position = UDim2.new(0.008, 0, 0, 0),
@@ -1819,7 +1819,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.colorpickerframeb = Library:Create("Frame", {
 						Name = "colorframe",
-						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
+						BackgroundColor3 = bannerColor,
 						BorderSizePixel = 0,
 						Position = UDim2.new(1, 8, 0, 0),
 						Size = UDim2.new(0, 0, 0, 205),
