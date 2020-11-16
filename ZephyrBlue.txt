@@ -782,7 +782,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.TextLabelBox = Library:Create("ImageLabel", {
 						Name = Name.."TextLabel",
-						BackgroundColor3 = textColor,
+						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
 						Position = UDim2.new(0.0192307699, 0, 0.467741936, 0),
@@ -1981,9 +1981,9 @@ function Library:CreateMain(Options)
 						Size = UDim2.new(0, 140, 0, 140),
 						ZIndex = 2,
 						Image = "rbxassetid://4695575676",
-						ImageColor3 = bannerColor,
+						ImageColor3 = Color3.fromRGB(46, 46, 54),
 						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(128, 128, 128, 128),[1]
+						SliceCenter = Rect.new(128, 128, 128, 128),
 						SliceScale = 0.040,
 					})
 					
@@ -2046,7 +2046,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.rainbowtoggle = Library:Create("ImageButton", {
 						Active = false,
-						BackgroundColor3 = textColor,
+						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
 						Position = UDim2.new(0.0529999994, 0, 0, 180),
