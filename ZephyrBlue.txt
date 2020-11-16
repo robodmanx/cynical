@@ -1091,7 +1091,7 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(1, 0, 0, 120),
 							ZIndex = 2,
 							Image = "rbxassetid://3570695787",
-							ImageColor3 = bannerColor,
+							ImageColor3 = textColor,
 							ScaleType = Enum.ScaleType.Slice,
 							SliceCenter = Rect.new(100, 100, 100, 100),
 							SliceScale = 0.040,
@@ -1983,7 +1983,7 @@ function Library:CreateMain(Options)
 						Image = "rbxassetid://4695575676",
 						ImageColor3 = bannerColor,
 						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(128, 128, 128, 128),
+						SliceCenter = Rect.new(128, 128, 128, 128),[1]
 						SliceScale = 0.040,
 					})
 					
