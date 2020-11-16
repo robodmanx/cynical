@@ -16,7 +16,7 @@ local Library = {}
 local Objects = {}
 
 local Themes = {
-	TextColor = Color3.fromRGB(79, 195, 247)
+	TextColor = Color3.fromRGB(0, 0, 0)
 }
 
 local bannerColor = Color3.fromRGB(230, 230, 241)
