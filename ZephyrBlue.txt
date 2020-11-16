@@ -1631,7 +1631,6 @@ function Library:CreateMain(Options)
 									if not Options.plotlist then 
 										for i, v in pairs(list) do
 											if v:IsA("Player") then
-												print(v)
 												table.insert(tablelist, v.Name)
 											end
 										end     
@@ -2188,8 +2187,7 @@ function Library:CreateMain(Options)
 						local gv = tonumber(Interactables.gvalue.Text)
 						local bv = tonumber(Interactables.bvalue.Text)
 						
-						
-						print(colorpickervalue)
+					
 						colorpickervalue = Color3.fromRGB(math.floor(colourPickColour.r * 255),math.floor(colourPickColour.g * 255),math.floor(colourPickColour.b * 255))
 						
 						Interactables.colorpickerbutton.ImageColor3 = colourPickColour
