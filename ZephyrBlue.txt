@@ -21,7 +21,7 @@ local Themes = {
 
 local bannerColor = Color3.fromRGB(141, 189, 255)
 local selectedTab = Color3.fromRGB(100, 161, 244)
-local textColor = Color3.fromRGB(75, 145, 241)
+local textColor = Color3.fromRGB(60, 125, 217)
 local bgColor = Color3.fromRGB(191, 214, 246)
 
 function Library:Create(what, propri)
