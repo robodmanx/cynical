@@ -166,7 +166,7 @@ function Library:CreateMain(Options)
 			AutoButtonColor = false,
 			Font = Enum.Font.SourceSans,
 			Text = "",
-			TextColor3 = textColor,
+			TextColor3 = Color3.fromRGB(0, 0, 0),
 			TextSize = 14.000,
 		})
 		
@@ -707,7 +707,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.TextBox = Library:Create("ImageLabel", {
 						Name = Name.."Textbox",
-						BackgroundColor3 = textColor,
+						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
 						Position = UDim2.new(0.0192307699, 0, 0.467741936, 0),
@@ -1429,7 +1429,7 @@ function Library:CreateMain(Options)
 						
 						Interactables.selected = Library:Create("TextBox", {
 							Active = false,
-							BackgroundColor3 = textColor,
+							BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 							BackgroundTransparency = 1.000,
 							BorderSizePixel = 0,
 							Position = UDim2.new(0.008, 0, 0, 0),
@@ -1444,7 +1444,7 @@ function Library:CreateMain(Options)
 						
 						Interactables.listb = Library:Create("ImageLabel", {
 							Active = true,
-							BackgroundColor3 = textColor,
+							BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 							BackgroundTransparency = 1.000,
 							BorderColor3 = Color3.fromRGB(27, 42, 53),
 							Position = UDim2.new(0, 0, 0, 40),
@@ -1819,7 +1819,7 @@ function Library:CreateMain(Options)
 					
 					Interactables.colorpickerframeb = Library:Create("Frame", {
 						Name = "colorframe",
-						BackgroundColor3 = bannerColor,
+						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
 						BorderSizePixel = 0,
 						Position = UDim2.new(1, 8, 0, 0),
 						Size = UDim2.new(0, 0, 0, 205),
@@ -1828,7 +1828,7 @@ function Library:CreateMain(Options)
 					Interactables.colorpickerframeb.ClipsDescendants = true
 					
 					Interactables.colorpickerframe = Library:Create("Frame", {
-						BackgroundColor3 = bannerColor,
+						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
 						BorderSizePixel = 0,
 						Position = UDim2.new(0, 0, 0, 0),
 						Size = UDim2.new(0, 190, 0, 205),                            
@@ -1974,7 +1974,7 @@ function Library:CreateMain(Options)
 					})
 					
 					Interactables.sback = Library:Create("ImageLabel", {
-						BackgroundColor3 = bannerColor,
+						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
 						Position = UDim2.new(0.0469999984, 0, 0, 10),
