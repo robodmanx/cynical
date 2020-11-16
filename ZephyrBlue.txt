@@ -1429,7 +1429,7 @@ function Library:CreateMain(Options)
 						
 						Interactables.selected = Library:Create("TextBox", {
 							Active = false,
-							BackgroundColor3 = Color3.fromRGB(248, 248, 248),
+							BackgroundColor3 = textColor,
 							BackgroundTransparency = 1.000,
 							BorderSizePixel = 0,
 							Position = UDim2.new(0.008, 0, 0, 0),
@@ -1444,7 +1444,7 @@ function Library:CreateMain(Options)
 						
 						Interactables.listb = Library:Create("ImageLabel", {
 							Active = true,
-							BackgroundColor3 = Color3.fromRGB(248, 248, 248),
+							BackgroundColor3 = textColor,
 							BackgroundTransparency = 1.000,
 							BorderColor3 = Color3.fromRGB(27, 42, 53),
 							Position = UDim2.new(0, 0, 0, 40),
