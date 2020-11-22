@@ -2182,8 +2182,14 @@ function Library:CreateMain(Options)
 						end
 					end)
 
+					local h,s,v = 0,0,1
+					local color = Color3.fromRGB(255,255,255)
+					local r,g,b = 255,255,255
 
-					function Update()
+					local hueconnection
+					local darknessconnection
+
+					local function Update()
 
 						Interactables.RBox.Text = math.floor(r)
 						Interactables.GBox.Text = math.floor(g)
