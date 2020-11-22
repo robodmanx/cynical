@@ -1880,9 +1880,10 @@ function Library:CreateMain(Options)
 					
 				elseif Type:lower() == "colorpicker" then 
 					
+					
 					local colorpickeropen = false
 					local colorpickervalue
-					
+
 					Interactables.colorpickerb = Library:Create("ImageButton", {
 						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 						BackgroundTransparency = 1.000,
@@ -1897,7 +1898,7 @@ function Library:CreateMain(Options)
 					})
 
 					table.insert(Objects.DarkContrast , Interactables.colorpickerb)
-					
+
 					Interactables.colorpickertext = Library:Create("TextLabel", {
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
@@ -1915,6 +1916,7 @@ function Library:CreateMain(Options)
 
 					Interactables.colorpickerbutton = Library:Create("ImageLabel", {
 						Active = true,
+						Name = "Value",
 						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
@@ -1927,480 +1929,378 @@ function Library:CreateMain(Options)
 						SliceCenter = Rect.new(100, 100, 100, 100),
 						SliceScale = 0.040,
 					})
-					
-					Interactables.colorpickerframeb = Library:Create("Frame", {
+
+					Interactables.ColorpickerFrameBack = Library:Create("Frame", {
 						Name = "colorframe",
 						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
 						BorderSizePixel = 0,
 						Position = UDim2.new(1, 8, 0, 0),
-						Size = UDim2.new(0, 0, 0, 205),
-						BackgroundTransparency = 1,
+						Size = UDim2.new(0, 0, 0, 265),
 					})
-					Interactables.colorpickerframeb.ClipsDescendants = true
-					
-					Interactables.colorpickerframe = Library:Create("Frame", {
+
+					Interactables.ColorpickerFrame = Library:Create("Frame", {
+						Name = "MainFrame",
 						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
 						BorderSizePixel = 0,
 						Position = UDim2.new(0, 0, 0, 0),
-						Size = UDim2.new(0, 190, 0, 205),                            
+						Size = UDim2.new(0, 220, 0, 265),
 					})
-					Interactables.colorpickerframe.ClipsDescendants = true
-					
-					Interactables.colorpickerupline = Library:Create("Frame", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+
+					Interactables.HuePicker = Library:Create("ImageButton", {
+						Name = "HuePicker",
+						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
+						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
-						Position = UDim2.new(0, 0, 0, 0),
-						Size = UDim2.new(1, 0, 0, 4),
+						Position = UDim2.new(0, 190, 0, 20),
+						Size = UDim2.new(0, 10, 0, 150),
+						ZIndex = 2,
+						Image = "http://www.roblox.com/asset/?id=5118428654",
 					})
-					
-					Interactables.colorpickeruplinegradient = Library:Create("UIGradient", {
-						Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 183, 183)), ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 248, 248)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(125, 92, 164))},
+
+					Interactables.Rounder = Library:Create("ImageLabel", {
+						Name = "Rounder",
+						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
+						BackgroundTransparency = 1.000,
+						BorderColor3 = Color3.fromRGB(27, 42, 53),
+						BorderSizePixel = 0,
+						Size = UDim2.new(1, 0, 1, 0),
+						Image = "rbxassetid://4695575676",
+						ImageColor3 = Color3.fromRGB(46, 46, 54),
+						ScaleType = Enum.ScaleType.Slice,
+						SliceCenter = Rect.new(128, 128, 128, 128),
+						SliceScale = 0.040,
 					})
-					
-					Interactables.rback = Library:Create("ImageLabel", {
-						Active = true,
+
+					Interactables.HueRing = Library:Create("ImageLabel", {
+						Name = "HueRing",
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1.000,
+						Position = UDim2.new(0, -1, 0, 0),
+						Size = UDim2.new(0, 12, 0, 12),
+						ZIndex = 2,
+						Image = "rbxassetid://3570695787",
+						ScaleType = Enum.ScaleType.Slice,
+						SliceCenter = Rect.new(100, 100, 100, 100),
+					})
+
+					Interactables.DarknessPicker = Library:Create("ImageButton", {
+						Name = "DarknessPicker",
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BorderColor3 = Color3.fromRGB(221, 221, 221),
+						BorderSizePixel = 0,
+						Position = UDim2.new(0, 20, 0, 20),
+						Size = UDim2.new(0, 150, 0, 150),
+						AutoButtonColor = false,
+						Image = "rbxassetid://5113592272",
+						ImageColor3 = Color3.fromRGB(255, 0, 0),
+					})
+
+					Interactables.Light = Library:Create("ImageLabel", {
+						Name = "Light",
+						BackgroundTransparency = 1.000,
+						BorderSizePixel = 0,
+						Size = UDim2.new(1, 0, 1, 0),
+						Image = "rbxassetid://5113600420",
+					})
+
+					Interactables.DarknessRing = Library:Create("ImageLabel", {
+						Name = "DarknessRing",
 						AnchorPoint = Vector2.new(0.5, 0.5),
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 35, 0, 165),
-						Selectable = true,
-						Size = UDim2.new(0, 50, 0, 20),
-						ZIndex = 2,
-						Image = "rbxassetid://3570695787",
-						ImageColor3 = Color3.fromRGB(29, 29, 35),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(100, 100, 100, 100),
-						SliceScale = 0.040,
+						Size = UDim2.new(0, 10, 0, 10),
+						SizeConstraint = Enum.SizeConstraint.RelativeYY,
+						ZIndex = 5,
+						Image = "http://www.roblox.com/asset/?id=5674514673",
 					})
-					
-					Interactables.rvalue = Library:Create("TextLabel", {
-						Name = "Colorpicker",
+
+					Interactables.R = Library:Create("Frame", {
+						Name = "R",
+						BackgroundColor3 = Color3.fromRGB(72, 72, 85),
+						BorderSizePixel = 0,
+						Position = UDim2.new(0, 20, 0, 212),
+						Size = UDim2.new(0, 30, 0, 2),    
+					})
+
+					Interactables.RLabel = Library:Create("TextLabel", {
+						Name = "RLabel",
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 18, 0, 3),
-						Size = UDim2.new(0, 25, 0, 15),
-						ZIndex = 2,
-						Font = Enum.Font.GothamBold,
-						Text = "255",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
-						TextSize = 11.000,
-					})
-					
-					Interactables.rtext = Library:Create("TextLabel", {
-						Name = "Colorpicker",
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 4, 0, 3),
-						Size = UDim2.new(0, 15, 0, 15),
-						ZIndex = 2,
+						Position = UDim2.new(0, 0, 0, -34),
+						Size = UDim2.new(0, 30, 0, 15),
 						Font = Enum.Font.GothamBold,
 						Text = "R:",
 						TextColor3 = Color3.fromRGB(255, 255, 255),
 						TextSize = 14.000,
+						TextXAlignment = Enum.TextXAlignment.Left,
 					})
-					
-					Interactables.gback = Library:Create("ImageLabel", {
-						Active = true,
-						AnchorPoint = Vector2.new(0.5, 0.5),
+
+					Interactables.RBox = Library:Create("TextBox", {
+						Name = "RBox",
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
-						Position = UDim2.new(0.5, 0, 0, 165),
-						Selectable = true,
-						Size = UDim2.new(0, 50, 0, 20),
-						ZIndex = 2,
-						Image = "rbxassetid://3570695787",
-						ImageColor3 = Color3.fromRGB(29, 29, 35),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(100, 100, 100, 100),
-						SliceScale = 0.040,
-					})
-					
-					Interactables.gvalue = Library:Create("TextLabel", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 18, 0, 3),
-						Size = UDim2.new(0, 25, 0, 15),
-						ZIndex = 2,
-						Name = "Colorpicker",
+						Position = UDim2.new(0, 0, 0, -15),
+						Size = UDim2.new(0, 30, 0, 15),
 						Font = Enum.Font.GothamBold,
 						Text = "255",
 						TextColor3 = Color3.fromRGB(255, 255, 255),
-						TextSize = 11.000,
+						TextSize = 14.000,
+						TextXAlignment = Enum.TextXAlignment.Left,    
 					})
-					
-					Interactables.gtext = Library:Create("TextLabel", {
+
+					Interactables.G = Library:Create("Frame", {
+						Name = "G",
+						BackgroundColor3 = Color3.fromRGB(72, 72, 85),
+						BorderSizePixel = 0,
+						Position = UDim2.new(0, 95, 0, 212),
+						Size = UDim2.new(0, 30, 0, 2),
+					})
+
+					Interactables.GLabel = Library:Create("TextLabel", {
+						Name = "GLabel",
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 4, 0, 3),
-						Size = UDim2.new(0, 15, 0, 15),
-						ZIndex = 2,
+						Position = UDim2.new(0, 0, 0, -34),
+						Size = UDim2.new(0, 30, 0, 15),
 						Font = Enum.Font.GothamBold,
 						Text = "G:",
-						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
-						TextSize = 14.000,
-						TextWrapped = true,
-					})
-					
-					Interactables.bback = Library:Create("ImageLabel", {
-						Active = true,
-						AnchorPoint = Vector2.new(0.5, 0.5),
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 155, 0, 165),
-						Selectable = true,
-						Size = UDim2.new(0, 50, 0, 20),
-						Image = "rbxassetid://3570695787",
-						ImageColor3 = Color3.fromRGB(29, 29, 35),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(100, 100, 100, 100),
-						SliceScale = 0.040,
-					})
-					
-					Interactables.bvalue = Library:Create("TextLabel", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 18, 0, 3),
-						Size = UDim2.new(0, 25, 0, 15),
-						ZIndex = 2,
-						Font = Enum.Font.GothamBold,
-						Text = "255",
-						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
-						TextSize = 11.000,
-					})
-					
-					Interactables.btext = Library:Create("TextLabel", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 4, 0, 3),
-						Size = UDim2.new(0, 15, 0, 15),
-						ZIndex = 2,
-						Font = Enum.Font.GothamBold,
-						Text = "B:",
-						Name = "Colorpicker",
-						TextColor3 = Color3.fromRGB(255, 255, 255),
-						TextSize = 14.000,
-					})
-					
-					Interactables.sback = Library:Create("ImageLabel", {
-						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
-						BackgroundTransparency = 1.000,
-						BorderSizePixel = 0,
-						Position = UDim2.new(0.0469999984, 0, 0, 10),
-						Size = UDim2.new(0, 140, 0, 140),
-						ZIndex = 2,
-						Image = "rbxassetid://4695575676",
-						ImageColor3 = Color3.fromRGB(46, 46, 54),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(128, 128, 128, 128),
-						SliceScale = 0.040,
-					})
-					
-					Interactables.sat = Library:Create("ImageButton", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BorderColor3 = Color3.fromRGB(221, 221, 221),
-						BorderSizePixel = 0,
-						Size = UDim2.new(0, 140, 0, 140),
-						AutoButtonColor = false,
-						Image = "http://www.roblox.com/asset/?id=5113592272",
-						ImageColor3 = Color3.fromRGB(255, 0, 0),
-					})
-					
-					Interactables.light = Library:Create("ImageLabel", {
-						BackgroundTransparency = 1.000,
-						BorderSizePixel = 0,
-						Size = UDim2.new(1, 0, 1, 0),
-						Image = "http://www.roblox.com/asset/?id=5113600420",
-					})
-					
-					Interactables.ring = Library:Create("ImageLabel", {
-						AnchorPoint = Vector2.new(0.5, 0.5),
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 140, 0, 0),
-						Size = UDim2.new(0, 10, 0, 10),
-						SizeConstraint = Enum.SizeConstraint.RelativeYY,
-						ZIndex = 5,
-						Image = "rbxassetid://244221613",
-						ImageColor3 = Color3.fromRGB(0, 0, 0),
-					})
-					
-					Interactables.rainbowback = Library:Create("ImageLabel", {
-						BackgroundColor3 = Color3.fromRGB(46, 46, 54),
-						BackgroundTransparency = 1.000,
-						BorderSizePixel = 0,
-						Position = UDim2.new(0, 160, 0, 10),
-						Size = UDim2.new(0, 20, 0, 140),
-						ZIndex = 2,
-						Image = "rbxassetid://4695575676",
-						ImageColor3 = Color3.fromRGB(46, 46, 54),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(128, 128, 128, 128),
-						SliceScale = 0.040,
-					})
-					
-					Interactables.rainbow = Library:Create("ImageButton", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						BorderSizePixel = 0,
-						Size = UDim2.new(0, 20, 0, 140),
-						Image = "http://www.roblox.com/asset/?id=5118428654",
-					})
-					
-					Interactables.rainbowlocation = Library:Create("Frame", {
-						BackgroundColor3 = Color3.fromRGB(23, 23, 23),
-						BorderSizePixel = 0,
-						Size = UDim2.new(0, 20, 0, 2),
-					})
-					
-					Interactables.rainbowtoggle = Library:Create("ImageButton", {
-						Active = false,
-						BackgroundColor3 = Color3.fromRGB(248, 248, 248),
-						BackgroundTransparency = 1.000,
-						BorderSizePixel = 0,
-						Position = UDim2.new(0.0529999994, 0, 0, 180),
-						Selectable = false,
-						Size = UDim2.new(0, 172, 0, 20),
-						Image = "rbxassetid://3570695787",
-						ImageColor3 = Color3.fromRGB(29, 29, 35),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(100, 100, 100, 100),
-						SliceScale = 0.040,
-					})
-					
-					Interactables.rainbowtoggletext = Library:Create("TextLabel", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						Position = UDim2.new(0, 1, 0, 2),
-						Size = UDim2.new(-0.529476523, 200, 0, 16),
-						Font = Enum.Font.GothamBold,
-						Text = "Rainbow",
-						Name = "Colorpicker",
 						TextColor3 = Color3.fromRGB(255, 255, 255),
 						TextSize = 14.000,
 						TextXAlignment = Enum.TextXAlignment.Left,
 					})
-					
-					Interactables.rainbowtoggleback = Library:Create("ImageLabel", {
+
+					Interactables.GBox = Library:Create("TextBox", {
+						Name = "GBox",
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
-						Position = UDim2.new(0, 118, 0, 0),
-						Size = UDim2.new(0, 50, 0, 16),
-						Image = "rbxassetid://3570695787",
-						ImageColor3 = Color3.fromRGB(20, 20, 20),
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(100, 100, 100, 100),
-						SliceScale = 0.040,
+						Position = UDim2.new(0, 0, 0, -15),
+						Size = UDim2.new(0, 30, 0, 15),
+						Font = Enum.Font.GothamBold,
+						Text = "255",
+						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextSize = 14.000,
+						TextXAlignment = Enum.TextXAlignment.Left,
 					})
-					
-					Interactables.rainbowtoggleonoff = Library:Create("ImageLabel", {
+
+					Interactables.B = Library:Create("Frame", {
+						Name = "B",
+						BackgroundColor3 = Color3.fromRGB(72, 72, 85),
+						BorderSizePixel = 0,
+						Position = UDim2.new(0, 171, 0, 212),
+						Size = UDim2.new(0, 30, 0, 2),
+					})
+
+					Interactables.BLabel = Library:Create("TextLabel", {
+						Name = "BLabel",
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1.000,
+						Position = UDim2.new(0, 0, 0, -34),
+						Size = UDim2.new(0, 30, 0, 15),
+						Font = Enum.Font.GothamBold,
+						Text = "B:",
+						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextSize = 14.000,
+						TextXAlignment = Enum.TextXAlignment.Left,
+					})
+
+					Interactables.BBox = Library:Create("TextBox", {
+						Name = "BBox",
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
 						BackgroundTransparency = 1.000,
 						BorderSizePixel = 0,
-						Position = UDim2.new(0, 2, 0, 2),
-						Size = UDim2.new(0, 20, 0, 12),
-						ZIndex = 2,
-						Image = "rbxassetid://3570695787",
-						ScaleType = Enum.ScaleType.Slice,
-						SliceCenter = Rect.new(100, 100, 100, 100),
-						SliceScale = 0.040,
+						Position = UDim2.new(0, 0, 0, -15),
+						Size = UDim2.new(0, 30, 0, 15),
+						Font = Enum.Font.GothamBold,
+						Text = "255",
+						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextSize = 14.000,
+						TextXAlignment = Enum.TextXAlignment.Left,
 					})
-					
-					
-					Interactables.colorpickerframeb.Parent = Main.Motherframe
-					Interactables.colorpickerframe.Parent = Interactables.colorpickerframeb
-					Interactables.colorpickerupline.Parent = Interactables.colorpickerframe
-					Interactables.colorpickeruplinegradient.Parent = Interactables.colorpickerupline
-					Interactables.rback.Parent = Interactables.colorpickerframe
-					Interactables.rtext.Parent = Interactables.rback
-					Interactables.rvalue.Parent = Interactables.rback
-					Interactables.gback.Parent = Interactables.colorpickerframe
-					Interactables.gtext.Parent = Interactables.gback
-					Interactables.gvalue.Parent = Interactables.gback
-					Interactables.bback.Parent = Interactables.colorpickerframe
-					Interactables.btext.Parent = Interactables.bback
-					Interactables.bvalue.Parent = Interactables.bback
-					Interactables.sback.Parent = Interactables.colorpickerframe
-					Interactables.sat.Parent = Interactables.sback
-					Interactables.light.Parent = Interactables.sat
-					Interactables.ring.Parent = Interactables.sat
-					Interactables.rainbowback.Parent = Interactables.colorpickerframe
-					Interactables.rainbow.Parent = Interactables.rainbowback
-					Interactables.rainbowlocation.Parent = Interactables.rainbow
-					Interactables.rainbowtoggle.Parent = Interactables.colorpickerframe
-					Interactables.rainbowtoggletext.Parent = Interactables.rainbowtoggle
-					Interactables.rainbowtoggleback.Parent = Interactables.rainbowtoggletext
-					Interactables.rainbowtoggleonoff.Parent = Interactables.rainbowtoggleback
-					
-					
+
+					Interactables.Done = Library:Create("TextButton", {
+						Name = "Done",
+						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+						BackgroundTransparency = 1.000,
+						Position = UDim2.new(0, 60, 0, 227),
+						Size = UDim2.new(0, 100, 0, 25),
+						Font = Enum.Font.GothamBold,
+						Text = "DONE",
+						TextColor3 = Color3.fromRGB(255, 255, 255),
+						TextSize = 16.000,
+					})
+
+					Interactables.ColorpickerFrameBack.Parent = Main.Motherframe
+					Interactables.ColorpickerFrameBack.ClipsDescendants = true
+					Interactables.ColorpickerFrame.Parent = Interactables.ColorpickerFrameBack
+					Interactables.HuePicker.Parent = Interactables.ColorpickerFrame
+					Interactables.Rounder.Parent = Interactables.HuePicker
+					Interactables.HueRing.Parent = Interactables.HuePicker
+					Interactables.DarknessPicker.Parent = Interactables.ColorpickerFrame
+					Interactables.Light.Parent = Interactables.DarknessPicker
+					Interactables.DarknessRing.Parent = Interactables.DarknessPicker
+					Interactables.R.Parent = Interactables.ColorpickerFrame
+					Interactables.RLabel.Parent = Interactables.R
+					Interactables.RBox.Parent = Interactables.R
+					Interactables.G.Parent = Interactables.ColorpickerFrame
+					Interactables.GLabel.Parent = Interactables.G
+					Interactables.GBox.Parent = Interactables.G
+					Interactables.B.Parent = Interactables.ColorpickerFrame
+					Interactables.BLabel.Parent = Interactables.B
+					Interactables.BBox.Parent = Interactables.B
+					Interactables.Done.Parent = Interactables.ColorpickerFrame
+
+
 					Section.Container.Size = Section.Container.Size + UDim2.new(0, 0, 0, 45)
 					Category.Container.CanvasSize = Category.Container.CanvasSize + UDim2.new(0, 0, 0, 45)
-					
+
 					Interactables.colorpickerb.Parent = Section.Container
 					Interactables.colorpickertext.Parent = Interactables.colorpickerb
 					Interactables.colorpickerbutton.Parent = Interactables.colorpickerb
-					
+
 					Interactables.colorpickerb.MouseButton1Click:Connect(function()
 						colorpickeropen = not colorpickeropen
-						
+
 						for i,v in pairs(Main.Motherframe:GetChildren()) do
 							if v.Name == "colorframe" then
-								game:GetService("TweenService"):Create(v, TweenInfo.new(0.3), {Size = UDim2.new(0, 0, 0, 205)}):Play()
+								game:GetService("TweenService"):Create(v, TweenInfo.new(0.3), {Size = UDim2.new(0, 0, 0, 265)}):Play()
 							end
 						end
-						
+
 						if colorpickeropen then 
-							game:GetService("TweenService"):Create(Interactables.colorpickerframeb, TweenInfo.new(0.3), {Size = UDim2.new(0, 190, 0, 205)}):Play()
+							game:GetService("TweenService"):Create(Interactables.ColorpickerFrameBack, TweenInfo.new(0.3), {Size = UDim2.new(0, 220, 0, 265)}):Play()
 						end
 					end)
-					
-					
-					local colorbase = Color3.new(1,0,0)
-					colorpickervalue = colorbase
-					local Saturation = 1
-					local Darkness = 0
-					local colourPickColour = colorbase
-					
-					local function UpdateColorPicker()
-						
-						colourPickColour = colorbase
-						
-						if Darkness == 1 then
-							colourPickColour = Color3.new(0,0,0)
-							return
-						end
-						
-						if Saturation < 1 then
-							local r = math.clamp(1 + (colourPickColour.r - 1) * Saturation, 0, 1)
-							local g = math.clamp(1 + (colourPickColour.g - 1) * Saturation, 0, 1)
-							local b = math.clamp(1 + (colourPickColour.b - 1) * Saturation, 0, 1)
-							colourPickColour = Color3.new( r, g, b )
-						end
-						
-						if Darkness > 0 then 
-							local r = math.clamp(colourPickColour.r * (1 - Darkness ), 0, 1)
-							local g = math.clamp(colourPickColour.g * (1 - Darkness ), 0, 1)
-							local b = math.clamp(colourPickColour.b * (1 - Darkness ), 0, 1)
-							colourPickColour = Color3.new(r,g,b)
-						end
-						
-						Interactables.rvalue.Text = tostring(math.floor(colourPickColour.r * 255))
-						Interactables.gvalue.Text = tostring(math.floor(colourPickColour.g * 255))
-						Interactables.bvalue.Text = tostring(math.floor(colourPickColour.b * 255))
-						
-						local rv = tonumber(Interactables.rvalue.Text)
-						local gv = tonumber(Interactables.gvalue.Text)
-						local bv = tonumber(Interactables.bvalue.Text)
-						
-						
-						colorpickervalue = Color3.fromRGB(math.floor(colourPickColour.r * 255),math.floor(colourPickColour.g * 255),math.floor(colourPickColour.b * 255))
-						
-						Interactables.colorpickerbutton.ImageColor3 = colourPickColour
-						
-						if CallBack then
-							CallBack(colorpickervalue)
-						end
-					end
-					
-					if Options then
-						if Options.default then
-							local r,g,b = math.floor(Options.default.r * 255),math.floor(Options.default.g * 255),math.floor(Options.default.b * 255)
-                            colorbase = Color3.fromRGB(r,g,b)
-                            local h,s,v = Color3.toHSV(colorbase)
-                            Interactables.sat.ImageColor3 = Color3.fromHSV(h,1,1)
-                            
-                            if CallBack then
-                                CallBack(Color3.fromRGB(r,g,b))
-                            end
-                            TS:Create(Interactables.ring, TweenInfo.new(0.1), {Position = UDim2.new(s, 0, 1 - v, 0.5)}):Play()
-                            TS:Create(Interactables.rainbowlocation, TweenInfo.new(0.1), {Position = UDim2.new(0, 0, h, 0)}):Play()
-                            UpdateColorPicker()
-						end
-                    end
-					
-					local function setPickerColor(y)
-						local rY = y - Interactables.rainbow.AbsolutePosition.Y;
-						local cY = math.clamp(rY, 0, Interactables.rainbow.AbsoluteSize.Y - Interactables.rainbowlocation.AbsoluteSize.Y);
-						local offset = (y - Interactables.rainbow.AbsolutePosition.Y) - Interactables.rainbowlocation.AbsoluteSize.Y
-						local scale = offset / Interactables.rainbow.AbsoluteSize.Y
-						TS:Create(Interactables.rainbowlocation, TweenInfo.new(0.1), {Position = UDim2.new(0, 0, 0, cY)}):Play()
-						local color = Color3.fromHSV(math.clamp(scale, 0, 1), 1, 1)
-						local r,g,b = math.floor(color.r * 255), math.floor(color.g * 255), math.floor(color.b * 255)
-						colorbase = Color3.fromRGB(r,g,b)
-						
-						Interactables.sat.ImageColor3 = colorbase
-						UpdateColorPicker()
-					end
-					
-					local function setPickerLight(x,y)
-						Saturation = x / 140
-						Darkness = y / 140
-						
-						TS:Create(Interactables.ring, TweenInfo.new(0.1), {Position = UDim2.new(0, x, 0, y)}):Play()
-						
-						UpdateColorPicker()
-					end
-					
-					local rc
-					local cc
-					
-					UIS.InputEnded:Connect(function(Mouse)
-						if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
-							if(cc) then
-								cc:Disconnect()
-								cc = nil
-							end
-							if(rc) then 
-								rc:Disconnect()
-								rc = nil
+
+					Interactables.Done.MouseButton1Click:Connect(function()
+						colorpickeropen = not colorpickeropen
+						for i,v in pairs(Main.Motherframe:GetChildren()) do
+							if v.Name == "colorframe" then
+								game:GetService("TweenService"):Create(v, TweenInfo.new(0.3), {Size = UDim2.new(0, 0, 0, 265)}):Play()
 							end
 						end
 					end)
+
+
+					function Update()
+
+						Interactables.RBox.Text = math.floor(r)
+						Interactables.GBox.Text = math.floor(g)
+						Interactables.BBox.Text = math.floor(b)
+						
+						TS:Create(Interactables.HueRing, TweenInfo.new(0.12), {Position = UDim2.new(0, -1, h, -6)}):Play()
+						TS:Create(Interactables.DarknessRing, TweenInfo.new(0.12), {Position = UDim2.new(s, 0, 1 - v, 0)}):Play()
 					
-					local rainbow = false
+						Interactables.DarknessPicker.ImageColor3 = Color3.fromHSV(h,1,1)
+
+						Interactables.colorpickerbutton.ImageColor3 = Color3.fromRGB(r,g,b)
 					
-					Interactables.rainbow.MouseButton1Down:Connect(function()
-						if not rainbow then 
-							rc = game:GetService("RunService").Heartbeat:Connect(function()
-								setPickerColor(mouse.Y)
-							end)
+						local colorvalue = Color3.fromHSV(h,s,v)
+					
+						if CallBack then 
+							CallBack(colorvalue)
 						end
-					end)
+					end
 					
-					Interactables.sat.MouseButton1Down:Connect(function()
-						cc = game:GetService("RunService").Heartbeat:Connect(function()
-							local v = game:GetService("GuiService"):GetGuiInset()
-							local y = math.clamp(mouse.Y - Interactables.sat.AbsolutePosition.Y - v.y + 34, 0, 140 )
-							local x = math.clamp(mouse.X - Interactables.sat.AbsolutePosition.X - v.x, 0, 140 )
-							setPickerLight(x,y)
+					Interactables.HuePicker.MouseButton1Down:Connect(function()
+						hueconnection = RS.Heartbeat:Connect(function()
+							h = 1 - math.clamp(1 - ((mouse.Y - Interactables.HuePicker.AbsolutePosition.Y) / Interactables.HuePicker.AbsoluteSize.Y), 0, 1)
+							color = Color3.fromHSV(h,s,v)
+					
+							r,g,b = math.floor(color.r * 255), math.floor(color.g * 255), math.floor(color.b * 255)
+					
+							Update()
 						end)
 					end)
 					
-					local function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-					Interactables.rainbowtoggle.MouseButton1Click:Connect(function()
-						rainbow = not rainbow
-						if rainbow then 
-							game:GetService("TweenService"):Create(Interactables.rainbowtoggleonoff, TweenInfo.new(0.1), {Position = UDim2.new(0, 28,0, 2)}):Play()
-							local counter = 0
-							repeat wait() 
-								local color = Color3.fromHSV(zigzag(counter),1,1)
-								local r = color.r * 255
-								local b = color.b * 255
-								local g = color.g * 255
-								if counter >= 1.01 then
-									counter = -0.05
-								end
-								colorbase = Color3.fromRGB(r,g,b)
-								game:GetService("TweenService"):Create(Interactables.rainbowlocation, TweenInfo.new(0.1), {Position = UDim2.new(0, 0, counter, 0)}):Play()
-								counter = counter + 0.01
-								Interactables.sat.ImageColor3 = colorbase
-								UpdateColorPicker()
-							until rainbow == false
-						else
-							game:GetService("TweenService"):Create(Interactables.rainbowtoggleonoff, TweenInfo.new(0.1), {Position = UDim2.new(0, 2,0, 2)}):Play()
+					Interactables.DarknessPicker.MouseButton1Down:Connect(function()
+						darknessconnection = RS.Heartbeat:Connect(function()
+							s = math.clamp((mouse.X - Interactables.DarknessPicker.AbsolutePosition.X) / Interactables.DarknessPicker.AbsoluteSize.X, 0, 1)
+							v = 1 - math.clamp((mouse.Y - Interactables.DarknessPicker.AbsolutePosition.Y) / Interactables.DarknessPicker.AbsoluteSize.Y, 0, 1)
+							color = Color3.fromHSV(h,s,v)
+					
+							r,g,b = math.floor(color.r * 255), math.floor(color.g * 255), math.floor(color.b * 255)
+					
+							Update()
+						end)
+					end)
+					
+					Interactables.RBox:GetPropertyChangedSignal("Text"):Connect(function()
+						if not hueconnection and not darknessconnection then  
+							local Text = Interactables.RBox.Text
+					
+							if not tonumber(Text) then 
+								Interactables.RBox.Text = Interactables.RBox.Text:gsub("%D", "")
+							elseif tonumber(Text) > 255 then 
+								Interactables.RBox.Text = "255"
+							elseif tonumber(Text) and tonumber(Text) <= 255 then 
+								r = Text
+								local color = Color3.fromRGB(r,g,b)
+								h,s,v = Color3.toHSV(color)
+								Update()
+							end
+						end 
+					end)
+					
+					Interactables.GBox:GetPropertyChangedSignal("Text"):Connect(function()
+						if not hueconnection and not darknessconnection then 
+							local Text = Interactables.GBox.Text
+					
+							if not tonumber(Text) then 
+								Interactables.GBox.Text = Interactables.GBox.Text:gsub("%D", "")
+							elseif tonumber(Text) > 255 then 
+								Interactables.GBox.Text = "255"
+							elseif tonumber(Text) and tonumber(Text) <= 255 then 
+								g = Text
+								local color = Color3.fromRGB(r,g,b)
+								h,s,v = Color3.toHSV(color)
+								Update()
+							end
+						end 
+					end)
+					
+					Interactables.BBox:GetPropertyChangedSignal("Text"):Connect(function()
+						if not hueconnection and not darknessconnection then 
+							local Text = Interactables.BBox.Text
+					
+							if not tonumber(Text) then 
+								Interactables.BBox.Text = Interactables.BBox.Text:gsub("%D", "")
+							elseif tonumber(Text) > 255 then 
+								Interactables.BBox.Text = "255"
+							elseif tonumber(Text) and tonumber(Text) <= 255 then 
+								b = Text
+								local color = Color3.fromRGB(r,g,b)
+								h,s,v = Color3.toHSV(color)
+								Update()
+							end
+						end 
+					end)
+
+					if Options then 
+						if Options.default then 
+							r,g,b = Options.default.r * 255, Options.default.g * 255, Options.default.b * 255
+							h,s,v = Color3.toHSV(Options.default)
+							Update()
+						end 
+					end 
+					
+					function Library:SetColor(Color)
+						r,g,b = Color.r * 255, Color.g * 255, Color.b * 255
+						h,s,v = Color3.toHSV(Color)
+						Update()
+					end
+					
+					UIS.InputEnded:Connect(function(Mouse)
+						if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+							if hueconnection then
+								hueconnection:Disconnect()
+								hueconnection = nil
+							end
+							if darknessconnection then
+								darknessconnection:Disconnect()
+								darknessconnection = nil
+							end
 						end
 					end)
 					
