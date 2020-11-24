@@ -461,7 +461,12 @@ function Library:CreateMain(Options)
                         SliceScale = 0.040,
                     })
 
-                    table.insert(Objects.DarkContrast ,Interactables.Separator)
+                    Interactables.Separator.Parent = Section.Container 
+
+                    Section.Container.Size = Section.Container.Size + UDim2.new(0, 0, 0, 35)
+                    Category.Container.CanvasSize = Category.Container.CanvasSize + UDim2.new(0, 0, 0, 35)
+
+                    table.insert(Objects.DarkContrast, Interactables.Separator)
 					
 				elseif Type:lower() == "slider" then 
 					
