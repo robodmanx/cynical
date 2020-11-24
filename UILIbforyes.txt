@@ -447,7 +447,7 @@ function Library:CreateMain(Options)
 				elseif Type:lower() == "separator" then
 
                     Interactables.Separator = Library:Create("ImageLabel", {
-                        Name = Name.."Separator",
+                        Name = "Separator",
                         BackgroundColor3 = Color3.fromRGB(248, 248, 248),
                         BackgroundTransparency = 1.000,
                         BorderColor3 = Color3.fromRGB(27, 42, 53),
