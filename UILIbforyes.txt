@@ -453,7 +453,7 @@ function Library:CreateMain(Options)
                         BorderColor3 = Color3.fromRGB(27, 42, 53),
                         Position = UDim2.new(0, 10, 0, 85),
                         Selectable = true,
-                        Size = UDim2.new(0.982, 0, 0, 25),
+                        Size = UDim2.new(0.982, 0, 0, 10),
                         Image = "rbxassetid://3570695787",
                         ImageColor3 = Themes.DarkContrast,
                         ScaleType = Enum.ScaleType.Slice,
@@ -463,8 +463,8 @@ function Library:CreateMain(Options)
 
                     Interactables.Separator.Parent = Section.Container 
 
-                    Section.Container.Size = Section.Container.Size + UDim2.new(0, 0, 0, 35)
-                    Category.Container.CanvasSize = Category.Container.CanvasSize + UDim2.new(0, 0, 0, 35)
+                    Section.Container.Size = Section.Container.Size + UDim2.new(0, 0, 0, 20)
+                    Category.Container.CanvasSize = Category.Container.CanvasSize + UDim2.new(0, 0, 0, 20)
 
                     table.insert(Objects.DarkContrast, Interactables.Separator)
 					
