@@ -587,7 +587,6 @@ function Library:CreateMain(Options)
 					Interactables.SliderBackInner.MouseButton1Down:Connect(function()
 						
 						MoveConnection = RS.Heartbeat:Connect(function()
-							print(Interactables.SliderBackInner.AbsoluteSize.X)
 							local s = math.clamp(mouse.X - Interactables.SliderBackInner.AbsolutePosition.X, 0, Interactables.SliderBackInner.AbsoluteSize.X) / Interactables.SliderBackInner.AbsoluteSize.X
 							if Options.precise then
 								Value = string.format("%.1f", Min + ((Max - Min) * s))
