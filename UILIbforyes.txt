@@ -61,7 +61,11 @@ function Library:CreateMain(Options)
 		Position = UDim2.new(0.5, -400, 0.5, -225),
 		Size = UDim2.new(0, 700, 0, 460),
 	})
-
+	
+	if Options.DefaultSize then 
+        	Main.Motherframe.Size = Options.DefaultSize
+    	end 
+	
 	table.insert(Objects.Background, Main.Motherframe)
 
 	-- Drag is not made by me
