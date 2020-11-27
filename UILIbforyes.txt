@@ -615,6 +615,10 @@ function Library:CreateMain(Options)
 						
 					end)
 
+					function Interactables:GetValue()
+						return Value
+					end
+					
 					function Interactables:ChangeValue(SliderValue)
                         if SliderValue < Max then 
                             local scale = (SliderValue - Min) / (Max - Min)
@@ -736,7 +740,10 @@ function Library:CreateMain(Options)
 						end
 						
 					end)
-
+					function Interactables:GetState()
+						return State
+					end
+					
 					function Interactables:ChangeState(pp)
 						if pp then 
 							State = pp
