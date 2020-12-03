@@ -511,20 +511,63 @@ function Library:CreateMain(Options)
 
 					table.insert(Objects.TextColor, Interactables.SliderName)
 					
-					Interactables.SliderValue = Library:Create("TextLabel", {
-						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-						BackgroundTransparency = 1.000,
-						BorderSizePixel = 0,
-						Position = UDim2.new(0.888, 0, 0, 6),
-						Size = UDim2.new(0.088, 0, 0, 22),
-						Font = Enum.Font.GothamBold,
-						Text = Min,
-						TextColor3 = Themes.TextColor,
-						TextSize = 18.000,
-						TextXAlignment = Enum.TextXAlignment.Right,
-					})
-
-					table.insert(Objects.TextColor, Interactables.SliderValue)
+										if not Options.changablevalue then 
+						Interactables.SliderValue = Library:Create("TextLabel", {
+							BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+							BackgroundTransparency = 1.000,
+							BorderSizePixel = 0,
+							Position = UDim2.new(0.888, 0, 0, 6),
+							Size = UDim2.new(0.088, 0, 0, 22),
+							Font = Enum.Font.GothamBold,
+							Text = Min,
+							TextColor3 = Themes.TextColor,
+							TextSize = 18.000,
+							TextXAlignment = Enum.TextXAlignment.Right,
+						})
+	
+						table.insert(Objects.TextColor, Interactables.SliderValue)
+					else 
+						Interactables.SliderValue = Library:Create("TextBox", {
+							BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+							BackgroundTransparency = 1.000,
+							BorderSizePixel = 0,
+							Position = UDim2.new(0.888, 0, 0, 6),
+							Size = UDim2.new(0.088, 0, 0, 22),
+							Font = Enum.Font.GothamBold,
+							Text = Min,
+							TextColor3 = Themes.TextColor,
+							TextSize = 18.000,
+							TextXAlignment = Enum.TextXAlignment.Right,
+						})
+	
+						table.insert(Objects.TextColor, Interactables.SliderValue)
+						Interactables.SliderValue.FocusLost:Connect(function()
+							if Interactables.SliderValue.Text == "" then
+								Interactables.SliderValue.Text = Value
+							end
+						end)
+						Interactables.SliderValue:GetPropertyChangedSignal("Text"):Connect(function()
+							if not MoveConnection then
+								local number = tonumber(Interactables.SliderValue.Text)
+								if not tonumber(number) then 
+									Interactables.SliderValue.Text = Interactables.SliderValue.Text:gsub("%D", "")
+								elseif number < Min then
+									Value = Min
+									Interactables.SliderValue.Text = tostring(Min)
+								elseif number > Max then 
+									Value = Max 
+									Interactables.SliderValue.Text = tostring(Max)
+								elseif number >= Min and number <= Max then 
+									Value = number
+									if callback then
+										callback(number)
+									end
+									local scale = (number - Min) / (Max - Min)
+									TS:Create(Interactables.SliderInner, TweenInfo.new(0.05), {Size = UDim2.new(scale, 0, 0, 8)}):Play()
+								end 
+							end 
+						end)
+					end
 					
 					Interactables.SliderBackInner = Library:Create("ImageButton", {
 						BackgroundColor3 = Color3.fromRGB(255, 255, 255),
