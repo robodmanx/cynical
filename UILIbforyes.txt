@@ -2043,7 +2043,6 @@ function Library:CreateMain(Options)
 							tablelist = {}
 							if table then 
 								if table.options then 
-									print("yes")
 									tablelist = table.options
 									refreshlist()
 								end
