@@ -127,7 +127,7 @@ function Library:CreateMain(Options)
 		Position = UDim2.new(0, 0, 0.00899999309, 0),
 		Size = UDim2.new(0.214041099, 0, 0.991376221, 0),
 		CanvasSize = UDim2.new(0, 0, 0, 15),
-		ScrollBarThickness = 0,
+		ScrollBarThickness = 5,
 	})
 
 	table.insert(Objects.GrayContrast, Main.Sidebar)
@@ -279,7 +279,7 @@ function Library:CreateMain(Options)
 			CanvasSize = UDim2.new(0, 0, 0, 15),
 			Visible = false,
 			ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0),
-			ScrollBarThickness = 4,
+			ScrollBarThickness = 5,
 		})
 
 		table.insert(Objects.CharcoalContrast, Category.Container)
@@ -1505,7 +1505,7 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(1, 0, 1, 0),
 							ZIndex = 2,
 							CanvasSize = UDim2.new(0, 0, 0, 0),
-							ScrollBarThickness = 3,
+							ScrollBarThickness = 5,
 							ScrollBarImageColor3 = Themes.CharcoalContrast,
 						})
 
@@ -1905,7 +1905,7 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(1, 0, 1, 0),
 							ZIndex = 2,
 							CanvasSize = UDim2.new(0, 0, 0, 0),
-							ScrollBarThickness = 3,
+							ScrollBarThickness = 5,
 							ScrollBarImageColor3 = Color3.fromRGB(0,0,0),
 						})
 
