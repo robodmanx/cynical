@@ -2758,7 +2758,15 @@ function Library:SetThemeColor(Theme, Color)
 				v.ScrollBarImageColor3 = Color 
 			end
 		end  	
-    end 
+	end 
+end
+
+function Library:SetFont(FontName)
+	for i,v in pairs(Objects.TextColor) do 
+            	if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then 
+                	v.Font = FontName
+            	end 
+        end 
 end
 
 return Library
