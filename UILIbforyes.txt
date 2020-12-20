@@ -135,7 +135,7 @@ function Library:CreateMain(Options)
 		ScrollBarImageColor3 = Themes.ScrollBarContrast,
 	})
 
-	table.insert(Objects.ScrollBarContrast, Main.Sidebar)
+	table.insert(Objects.GrayContrast, Main.Sidebar)
 	
 	local Siderbarpadding = Library:Create("UIPadding", {
 		PaddingLeft = UDim.new(0.047, 0),
