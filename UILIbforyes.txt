@@ -16,13 +16,14 @@ local Library = {}
 local Objects = {Background = {}, GrayContrast = {}, DarkContrast = {}, TextColor = {}, SectionContrast = {}, DropDownListContrast = {}, CharcoalContrast = {}}
 
 local Themes = {
-    Background = Color3.fromRGB(46, 46, 54),
-    GrayContrast = Color3.fromRGB(39, 38, 46),
-    DarkContrast = Color3.fromRGB(29, 29, 35),
-    TextColor = Color3.fromRGB(255,255,255),
+    	Background = Color3.fromRGB(46, 46, 54),
+    	GrayContrast = Color3.fromRGB(39, 38, 46),
+    	DarkContrast = Color3.fromRGB(29, 29, 35),
+    	TextColor = Color3.fromRGB(255,255,255),
 	SectionContrast = Color3.fromRGB(39,38,46),
 	DropDownListContrast = Color3.fromRGB(34, 34, 41),
 	CharcoalContrast = Color3.fromRGB(21,21,26),
+	ScrollBarContrast = Color3.fromRGB(0, 0, 0),
 }
 
 function Library:Create(what, propri)
@@ -1508,10 +1509,10 @@ function Library:CreateMain(Options)
 							ZIndex = 2,
 							CanvasSize = UDim2.new(0, 0, 0, 0),
 							ScrollBarThickness = 8,
-							ScrollBarImageColor3 = Themes.CharcoalContrast,
+							ScrollBarImageColor3 = Themes.ScrollBarContrast,
 						})
 
-						table.insert(Objects.CharcoalContrast , Interactables.list)
+						table.insert(Objects.ScrollBarContrast , Interactables.list)
 						
 						local tlistlayout = Library:Create("UIListLayout", {
 							SortOrder = Enum.SortOrder.LayoutOrder,
@@ -1911,7 +1912,7 @@ function Library:CreateMain(Options)
 							ScrollBarImageColor3 = Color3.fromRGB(0,0,0),
 						})
 
-						table.insert(Objects.CharcoalContrast , Interactables.list)
+						table.insert(Objects.ScrollBarContrast , Interactables.list)
 						
 						local tlistlayout = Library:Create("UIListLayout", {
 							SortOrder = Enum.SortOrder.LayoutOrder,
