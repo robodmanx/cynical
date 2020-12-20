@@ -25,6 +25,10 @@ local Themes = {
 	CharcoalContrast = Color3.fromRGB(21,21,26),
 }
 
+local Settings = {
+    Font = Enum.Font.PermanentMarker
+}
+
 function Library:Create(what, propri)
 	local instance = Instance.new(what)
 	
