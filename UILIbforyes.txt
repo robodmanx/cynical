@@ -2756,10 +2756,14 @@ function Library:SetThemeColor(Theme, Color)
 		for i,v in pairs(Objects.CharcoalContrast) do 
 			if not v:IsA("ScrollingFrame") then 
 				v.ImageColor3 = Color
-			else
-				v.ScrollBarImageColor3 = Color 
 			end
-		end  	
+		end
+	elseif Theme == "ScrollBarContrast" then
+		for i, v in pairs(Objects.ScrollBarContrast) do
+			if v:IsA("ScrollingFrame") then
+				v.ScrollBarImageColor3 = Color
+			end
+		end
 	end 
 end
 
