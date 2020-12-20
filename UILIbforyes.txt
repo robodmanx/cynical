@@ -1912,7 +1912,7 @@ function Library:CreateMain(Options)
 							ScrollBarImageColor3 = Color3.fromRGB(0,0,0),
 						})
 
-						table.insert(Objects.ScrollBarContrast , Interactables.list)
+						table.insert(Objects.ScrollBarContrast, Interactables.list)
 						
 						local tlistlayout = Library:Create("UIListLayout", {
 							SortOrder = Enum.SortOrder.LayoutOrder,
