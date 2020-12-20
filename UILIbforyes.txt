@@ -13,7 +13,7 @@
 ]]
 
 local Library = {}
-local Objects = {Background = {}, GrayContrast = {}, DarkContrast = {}, TextColor = {}, SectionContrast = {}, DropDownListContrast = {}, CharcoalContrast = {}}
+local Objects = {Background = {}, GrayContrast = {}, DarkContrast = {}, TextColor = {}, SectionContrast = {}, DropDownListContrast = {}, CharcoalContrast = {}, ScrollbarContrast = {}}
 
 local Themes = {
     	Background = Color3.fromRGB(46, 46, 54),
