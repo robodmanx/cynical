@@ -25,10 +25,6 @@ local Themes = {
 	CharcoalContrast = Color3.fromRGB(21,21,26),
 }
 
-local Settings = {
-    Font = Enum.Font.PermanentMarker
-}
-
 function Library:Create(what, propri)
 	local instance = Instance.new(what)
 	
@@ -47,19 +43,6 @@ local TS = game:GetService("TweenService")
 local RS = game:GetService("RunService")
 
 local allFont = Enum.Font.PermanentMarker
-settingFile = "CynicalSettings.JSon"
-
-if not pcall(function() readfile(settingFile) end) then
-    writefile(settingFile, HttpService:JSONEncode(Settings))
-end
-
-SavingSettings = HttpService:JSONDecode(readfile(settingFile))
-
-for i, v in pairs(SavingSettings) do
-    Settings[i] = v
-    allFont = Enum.Font[v]
-end
-
 
 function Library:CreateMain(Options)
 	
@@ -2783,6 +2766,7 @@ function Library:SetFont(FontName)
 	for i,v in pairs(Objects.TextColor) do 
             	if v:IsA("TextLabel") or v:IsA("TextButton") or v:IsA("TextBox") then 
                 	v.Font = FontName
+			allFont = FontName
             	end 
         end 
 end
