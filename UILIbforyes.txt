@@ -41,7 +41,21 @@ local mouse = game.Players.LocalPlayer:GetMouse()
 local UIS = game:GetService("UserInputService")
 local TS = game:GetService("TweenService")
 local RS = game:GetService("RunService")
+
 local allFont = Enum.Font.PermanentMarker
+settingFile = "CynicalSettings.JSon"
+
+if not pcall(function() readfile(settingFile) end) then
+    writefile(settingFile, HttpService:JSONEncode(Settings))
+end
+
+SavingSettings = HttpService:JSONDecode(readfile(settingFile))
+
+for i, v in pairs(SavingSettings) do
+    Settings[i] = v
+    allFont = Enum.Font[v]
+end
+
 
 function Library:CreateMain(Options)
 	
