@@ -131,10 +131,11 @@ function Library:CreateMain(Options)
 		Position = UDim2.new(0, 0, 0.00899999309, 0),
 		Size = UDim2.new(0.214041099, 0, 0.991376221, 0),
 		CanvasSize = UDim2.new(0, 0, 0, 15),
-		ScrollBarThickness = 5,
+		ScrollBarThickness = 8,
+		ScrollBarImageColor3 = Themes.ScrollBarContrast,
 	})
 
-	table.insert(Objects.GrayContrast, Main.Sidebar)
+	table.insert(Objects.ScrollBarContrast, Main.Sidebar)
 	
 	local Siderbarpadding = Library:Create("UIPadding", {
 		PaddingLeft = UDim.new(0.047, 0),
@@ -282,11 +283,11 @@ function Library:CreateMain(Options)
 			Size = UDim2.new(1, 0, 1, 0),
 			CanvasSize = UDim2.new(0, 0, 0, 15),
 			Visible = false,
-			ScrollBarImageColor3 = Color3.fromRGB(0, 0, 0),
-			ScrollBarThickness = 5,
+			ScrollBarThickness = 8,
+			ScrollBarImageColor3 = Themes.ScrollBarContrast,
 		})
 
-		table.insert(Objects.CharcoalContrast, Category.Container)
+		table.insert(Objects.ScrollBarContrast, Category.Container)
 		table.insert(Objects.Background, Category.Container)
 		
 		Category.CPadding = Library:Create("UIPadding", {
@@ -1909,8 +1910,8 @@ function Library:CreateMain(Options)
 							Size = UDim2.new(1, 0, 1, 0),
 							ZIndex = 2,
 							CanvasSize = UDim2.new(0, 0, 0, 0),
-							ScrollBarThickness = 5,
-							ScrollBarImageColor3 = Color3.fromRGB(0,0,0),
+							ScrollBarThickness = 8,
+							ScrollBarImageColor3 = Themes.ScrollBarContrast,
 						})
 
 						table.insert(Objects.ScrollBarContrast, Interactables.list)
