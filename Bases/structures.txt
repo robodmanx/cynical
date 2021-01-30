@@ -2,6 +2,7 @@
 3 Tall Wall
 4 Tall Wall
 4 Tall Wall Advanced
+4 Tall Wall New
 5 Tall Wall
 48 Tall Wall
 Bank
