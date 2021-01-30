@@ -32,6 +32,7 @@ Pyramid
 Restaurant
 Rock Quarry
 Rude X Airplane
+Smiley
 Snow Man
 Snow Man Head
 The Castle
