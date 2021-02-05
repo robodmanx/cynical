@@ -8,6 +8,7 @@
 Bank
 Barn
 Base Shop
+Big Mansion
 Bobs Shack
 Christmas Tree
 Creeper
@@ -32,6 +33,7 @@ Pyramid
 Restaurant
 Rock Quarry
 Rude X Airplane
+Small Shop
 Smiley
 Snow Man
 Snow Man Head
