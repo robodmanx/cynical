@@ -15,6 +15,7 @@ Creeper
 Dome
 Dupe Silos
 Eiffel Tower
+Elegant House
 Fancy Bank
 Flat Star
 Floor
