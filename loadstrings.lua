@@ -17,5 +17,5 @@ elseif game.PlaceId == 8750997647 then
 elseif game.PlaceId == 1962086868 or game.PlaceId == 3582763398 or game.PlaceId == 5253186791 then
     loadstring(game:HttpGet('https://scripts.luawl.com/Fusion/MinersHaven.lua'))()
 elseif game.PlaceId == 171391948 then
-    loadstring(game:HttpGet('https://scripts.luawl.com/Fusion/VehicleSim.lua'))()
+    loadstring(game:HttpGet('https://scripts.luawl.com/Fusion/VehicleSimulator.lua'))()
 end
