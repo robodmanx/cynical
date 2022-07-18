@@ -18,4 +18,6 @@ elseif game.PlaceId == 1962086868 or game.PlaceId == 3582763398 or game.PlaceId 
     loadstring(game:HttpGet('https://scripts.luawl.com/Fusion/MinersHaven.lua'))()
 elseif game.PlaceId == 171391948 then
     loadstring(game:HttpGet('https://scripts.luawl.com/Fusion/VehicleSimulator.lua'))()
+elseif game.PlaceId == 9976239895 then
+    loadstring(game:HttpGet('https://scripts.luawl.com/Fusion/GumballTycoon.lua'))()
 end
