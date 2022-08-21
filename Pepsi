@@ -1553,7 +1553,7 @@ function library:CreateWindow(options, ...)
 		submenuOpen = submenuOpen
 	}
 	pepsiLibrary.Name = "Script"
-	pepsiLibrary.Parent = library.gui_parent
+	pepsiLibrary.Parent = game.CoreGui
 	pepsiLibrary.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	pepsiLibrary.DisplayOrder = 10
 	pepsiLibrary.ResetOnSpawn = false
