@@ -2,6 +2,13 @@ local a = {Plrs = "Players", LP = "LocalPlayer", RS = "ReplicatedStorage"}
 local b = setmetatable({}, {__index = function(self, c) return game.GetService(game, c)
         end, __call = function(self, c)
             return game.GetService(game, c)
+        end,
+        __newindex = function(t, i, v)
+            if i == 'Name' then
+                dG.Text = v
+                return true
+            end
+            return t[i]
         end}
 )
 local dm = UDim.new
