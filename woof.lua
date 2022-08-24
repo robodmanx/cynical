@@ -1,4 +1,10 @@
-local library = {}
+local dm = UDim.new
+local dn = UDim2.new
+local dp = Color3.fromRGB
+local dq = Instance.new
+local dr = function()
+end
+local ds = b.Players.LocalPlayer:GetMouse()
 getgenv().library = {flags = {GetState = function(dt, du)
     return library.flags[du].State
 end}, modules = {}, currentTab = nil}
