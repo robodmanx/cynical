@@ -781,5 +781,3 @@ library.flags[du]:SetOptions(eP)
 end
 return e7
 end
-
-return library
