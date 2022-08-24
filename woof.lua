@@ -1,4 +1,4 @@
-local library = {flags = {GetState = function(dt, du)
+getgenv().library = {flags = {GetState = function(dt, du)
     return library.flags[du].State
 end}, modules = {}, currentTab = nil}
 function library:UpdateToggle(du, be)
