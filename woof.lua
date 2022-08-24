@@ -1,3 +1,4 @@
+local library = {}
 getgenv().library = {flags = {GetState = function(dt, du)
     return library.flags[du].State
 end}, modules = {}, currentTab = nil}
@@ -781,3 +782,4 @@ library.flags[du]:SetOptions(eP)
 end
 return e7
 end
+return library
