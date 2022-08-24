@@ -8,7 +8,7 @@ local b = setmetatable({}, {__index = function(self, c) return game.GetService(g
                 dG.Text = v
                 return true
             end
-            return t[i]
+            t[i] = v
         end}
 )
 local dm = UDim.new
